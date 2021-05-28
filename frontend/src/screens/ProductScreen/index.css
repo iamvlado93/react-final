@@ -1,0 +1,90 @@
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.details-image {
+  padding: 1rem;
+  text-align: center;
+  flex: 2 1 60rem;
+}
+
+.details-image img {
+  max-width: 60rem;
+  width: 20rem;
+}
+
+.details-info {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  flex: 2 1 20rem;
+  border: 2px solid cyan;
+  border-radius: 40px;
+}
+
+.details-action {
+  text-align: center;
+  flex: 2 1 20rem;
+}
+
+.details-action li {
+  color: cyan;
+}
+
+.details-info ul li {
+  color: cyan;
+}
+
+.details-info ul,
+.details-action ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details-info li,
+.details-action li {
+  list-style: none;
+  padding: 0;
+  margin: 1rem;
+}
+
+.back-to-result {
+  padding: 1rem;
+}
+
+.details-action {
+  margin: 1rem;
+  border: 0.1rem solid black;
+  border-radius: 40px;
+  background: transparent;
+  border: 2px solid cyan;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+}
+
+.details-action ul li select {
+  margin: 0.5rem;
+  border-radius: 40px;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 2px solid cyan;
+}
+
+.details-action ul li button {
+  background: transparent;
+  font-size: 1rem;
+  border-radius: 40px;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: orange;
+  border: 2px solid orange;
+}
+
+.details-action ul li button:hover {
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
+}

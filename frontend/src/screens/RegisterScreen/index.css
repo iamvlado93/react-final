@@ -1,0 +1,52 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  padding: 2rem;
+  color: rgb(255, 255, 255);
+  border: 2px solid cyan;
+  border-radius: 40px;
+  list-style-type: none;
+}
+
+.form-container li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-container li button {
+  font-size: 2rem;
+  width: 10rem;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+}
+
+.form-container li button:hover {
+  color: orange;
+  border: 2px solid orange;
+  transition: 0.3s ease-in-out;
+}
+
+.form-container li a:hover {
+  color: orange;
+  transition: 0.3s ease-in-out;
+}
+
+input {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: transparent;
+  list-style-type: none;
+  border: 2px solid cyan;
+}
