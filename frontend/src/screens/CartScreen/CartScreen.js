@@ -22,7 +22,7 @@ function CartScreen(props) {
   };
 
   const checkoutHandler = () => {
-    props.history.push("/signin?redirect=shipping");
+    props.history.push("/shipping");
   };
 
   useEffect(() => {
@@ -36,8 +36,8 @@ function CartScreen(props) {
       <div className="cart-list">
         <ul className="cart-list-container">
           <li>
-            <h3>Shopping Cart</h3>
-            <div>Price</div>
+            <h2>Shopping Cart</h2>
+            <h2>Price:</h2>
           </li>
           {cartItems.length === 0 ? (
             <div>Cart is empty</div>
@@ -51,16 +51,16 @@ function CartScreen(props) {
                   <div>
                     <Link to={"/product/" + item.product}>{item.name}</Link>
                   </div>
-                  <div>
-                    <button
-                      type="button"
-                      className="button"
-                      onClick={() => removeFromCartHandler(item.product)}
-                    >
-                      Delete
-                    </button>
-                  </div>
+                  <button
+                    type="button"
+                    className="button"
+                    onClick={() => removeFromCartHandler(item.product)}
+                  >
+                    Delete
+                  </button>
+                  <h4>Qty: {item.qty}</h4>
                 </div>
+
                 <div className="cart-price">${item.price}</div>
               </li>
             ))
@@ -68,10 +68,11 @@ function CartScreen(props) {
         </ul>
       </div>
       <div className="cart-action">
-        <h3>
-          Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items) : $
-          {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
-        </h3>
+        <h4>
+          Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items) :{" "}
+          <span>${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</span>
+        </h4>
+
         <button
           onClick={checkoutHandler}
           className="button primary"

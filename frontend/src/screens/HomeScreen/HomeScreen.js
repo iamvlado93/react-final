@@ -40,6 +40,9 @@ function HomeScreen(props) {
               <div className="product-brand">{product.brand}</div>
               <div className="product-price">${product.price}</div>
               <div className="product-rating">{product.rating}</div>
+              <Link to={"/product/" + product._id}>
+                <button className="product-button">Choose</button>
+              </Link>
             </div>
           </div>
         </li>

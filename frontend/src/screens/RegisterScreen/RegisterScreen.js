@@ -21,9 +21,7 @@ function RegisterScreen(props) {
       props.history.push("/signin");
       swal("Good job!", "You have successfully registered!", "success");
     }
-    return () => {
-      //
-    };
+    return () => {};
   }, [userInfo]);
 
   const submitHandler = (e) => {
@@ -66,7 +64,7 @@ function RegisterScreen(props) {
             />
           </li>
           <li>
-            <label htmlFor="rePassword">Password</label>
+            <label htmlFor="rePassword">Confirm Password</label>
             <input
               type="Password"
               name="rePassword"

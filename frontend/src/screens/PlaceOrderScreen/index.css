@@ -1,0 +1,38 @@
+.placeorder-body div h3,
+.placeorder-body div div {
+  color: rgb(255, 255, 255);
+}
+
+.placeorder-body {
+  background-color: rgba(22, 22, 22, 0.815);
+  padding: 1rem;
+}
+
+.placeorder-action {
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 40px;
+  border: 2px solid cyan;
+}
+
+.placeorder-action span {
+  color: white;
+}
+
+.placeorder-action button {
+  width: 8rem;
+  background: transparent;
+  font-size: 1rem;
+  border-radius: 40px;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: orange;
+  border: 2px solid orange;
+}
+
+.placeorder-action button:hover {
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
+}

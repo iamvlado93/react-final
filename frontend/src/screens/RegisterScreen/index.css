@@ -22,6 +22,12 @@
   margin-bottom: 1rem;
 }
 
+.form-container li a {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .form-container li button {
   font-size: 2rem;
   width: 10rem;
@@ -44,6 +50,14 @@
 }
 
 input {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: transparent;
+  list-style-type: none;
+  border: 2px solid cyan;
+}
+
+input[type="file"] {
   padding: 1rem;
   border-radius: 1rem;
   background: transparent;

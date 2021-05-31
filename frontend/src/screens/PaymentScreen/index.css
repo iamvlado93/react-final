@@ -9,8 +9,19 @@
   flex: 1 1 80rem;
 }
 
+.form-container div {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.432);
+  border-radius: 40px;
+}
+
+span {
+  color: orange;
+}
+
 .cart-action {
   flex: 1 1 1 80rem;
+  width: 30%;
   background-color: transparent;
   border-radius: 40px;
   border: 2px solid cyan;
@@ -20,7 +31,7 @@
 
 .cart-action button {
   background: transparent;
-  font-size: 5rem;
+  font-size: 1rem;
   border-radius: 40px;
   padding: 0.5rem;
   cursor: pointer;
@@ -34,10 +45,9 @@
   transition: 0.3s ease-in-out;
 }
 
-.cart-action h4,
-.cart-action h4 span {
-  color: cyan;
-  font-size: 1.5rem;
+.cart-action h3 h4 {
+  color: white;
+  font-size: 2.5rem;
 }
 
 .cart-list-container {
@@ -56,10 +66,6 @@
   border-bottom: 0.1rem cyan solid;
 }
 
-.cart-list-container li div {
-  margin: 0.5rem;
-}
-
 .cart-list-container li img {
   max-width: 10rem;
   max-height: 10rem;
@@ -76,29 +82,19 @@
 }
 
 .cart-name {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: cyan;
+  flex: 8 1;
 }
 
-.cart-name h4 {
-  color: cyan;
-}
-
-.cart-name button {
-  width: 6rem;
-  margin: 0 1rem;
+.form-container div button {
   background: transparent;
   border-radius: 40px;
-  padding: 0.2rem;
+  padding: 0.4rem;
   cursor: pointer;
   color: orange;
   border: 2px solid orange;
 }
 
-.cart-name button:hover {
+.form-container div button:hover {
   color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
   transition: 0.3s ease-in-out;
