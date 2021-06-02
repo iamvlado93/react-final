@@ -53,8 +53,8 @@ function PlaceOrderScreen(props) {
             {cartItems.length === 0 ? (
               <div>Cart is empty</div>
             ) : (
-              cartItems.map((item) => (
-                <li key={item.id}>
+              cartItems.map((item, index) => (
+                <li key={index}>
                   <div className="cart-image">
                     <img src={item.image} alt="product" />
                   </div>
@@ -73,7 +73,7 @@ function PlaceOrderScreen(props) {
       </div>
       <div className="placeorder-action">
         <h4>
-          Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items) :{" "}
+          Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items) :
           <span>${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</span>
         </h4>
         <button className="button primary" disabled={cartItems.length === 0}>
