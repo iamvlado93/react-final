@@ -8,6 +8,8 @@ import "./index.css";
 
 function CartScreen(props) {
   const cart = useSelector((state) => state.cart);
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
 
   const { cartItems } = cart;
 
@@ -22,7 +24,11 @@ function CartScreen(props) {
   };
 
   const checkoutHandler = () => {
-    props.history.push("/shipping");
+    if (!userInfo) {
+      props.history.push("/signin");
+    } else {
+      props.history.push("/shipping");
+    }
   };
 
   useEffect(() => {

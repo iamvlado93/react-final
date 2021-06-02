@@ -13,14 +13,12 @@ function ProfileScreen(props) {
         <h3>Profile Info:</h3>
         <span>Name: {userInfo.name}</span>
         <span>Email: {userInfo.email}</span>
-        <span>Password: {userInfo.password}</span>
-        <span>Logout</span>
       </div>
       <div className="profile-avatar">
         <h3>Profile Avatar:</h3>
         <input type="file"></input> <button>Submit</button>
-        <div></div>
       </div>
+      <button className="profile-logout">Logout</button>
     </div>
   );
 }

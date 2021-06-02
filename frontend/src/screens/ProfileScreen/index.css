@@ -32,12 +32,28 @@
   margin: 0.2rem;
 }
 
+.profile-logout {
+  width: 6rem;
+  background: transparent;
+  border-radius: 40px;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: orange;
+  border: 2px solid cyan;
+}
+
+.profile-logout:hover {
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
+}
+
 .profile-avatar {
   height: 20vh;
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  background: rgba(0, 128, 0, 0.178);
+  background: rgba(238, 130, 238, 0.116);
   text-align: center;
   padding: 1rem;
 }
@@ -51,7 +67,7 @@
   padding: 0.5rem;
   cursor: pointer;
   color: orange;
-  border: 2px solid orange;
+  border: 2px solid cyan;
 }
 
 .profile-avatar button:hover {
