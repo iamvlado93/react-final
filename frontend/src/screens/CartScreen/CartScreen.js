@@ -35,7 +35,7 @@ function CartScreen(props) {
     if (productId) {
       dispatch(addToCart(productId, qty));
     }
-  }, []);
+  }, [productId, qty, dispatch]);
 
   return (
     <div className="cart">

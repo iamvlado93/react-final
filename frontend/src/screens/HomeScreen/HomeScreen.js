@@ -15,7 +15,7 @@ function HomeScreen(props) {
     return () => {
       //
     };
-  }, []);
+  }, [dispatch]);
 
   return loading ? (
     <div className="loading">Loading...</div>

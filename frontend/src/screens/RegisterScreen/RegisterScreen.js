@@ -22,11 +22,11 @@ function RegisterScreen(props) {
       swal("Good job!", "You have successfully registered!", "success");
     }
     return () => {};
-  }, [userInfo]);
+  }, [props.history, userInfo]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(register(name, email, password));
+    dispatch(register(name, email, password, rePassword));
   };
 
   return (
