@@ -18,7 +18,7 @@ function HomeScreen(props) {
   }, []);
 
   return loading ? (
-    <div>Loading...</div>
+    <div className="loading">Loading...</div>
   ) : error ? (
     <div>{error}</div>
   ) : (

@@ -1,0 +1,13 @@
+.form form {
+  display: flex;
+  align-items: center;
+}
+
+form div {
+  padding: 1rem;
+}
+
+.cc {
+  width: 25rem;
+  border-radius: 20px;
+}

@@ -29,5 +29,4 @@ const detailsProduct = (productId) => async (dispatch) => {
   }
 };
 
-export { listProducts };
-export { detailsProduct };
+export { listProducts, detailsProduct };

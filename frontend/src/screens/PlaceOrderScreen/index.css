@@ -8,6 +8,10 @@
   padding: 1rem;
 }
 
+.placeorder-body div div span {
+  color: cyan;
+}
+
 .placeorder-action {
   color: white;
   padding: 1rem;

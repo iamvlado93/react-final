@@ -11,6 +11,7 @@ import ProfileScreen from "./screens/ProfileScreen/ProfileScreen";
 import ShippingScreen from "./screens/ShippingScreen/ShippingScreen";
 import PaymentScreen from "./screens/PaymentScreen/PaymentScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen/PlaceOrderScreen";
+import CreditCardScreen from "./screens/CreditCardScreen/CreditCardScreen";
 
 import "./App.css";
 
@@ -44,6 +45,7 @@ function App() {
             <Route path="/shipping" component={ShippingScreen} />
             <Route path="/payment" component={PaymentScreen} />
             <Route path="/placeorder" component={PlaceOrderScreen} />
+            <Route path="/creditcard" component={CreditCardScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
           </div>
         </main>

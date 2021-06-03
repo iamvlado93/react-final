@@ -5,6 +5,9 @@ import {
   USER_REGISTER_SUCCESS,
   USER_REGISTER_REQUEST,
   USER_REGISTER_FAIL,
+  USER_LOGOUT_REQUEST,
+  USER_LOGOUT_SUCCESS,
+  USER_LOGOUT_FAIL,
 } from "../const/userConst";
 
 function userSigninReducer(state = {}, action) {
@@ -33,4 +36,17 @@ function userRegisterReducer(state = {}, action) {
   }
 }
 
-export { userSigninReducer, userRegisterReducer };
+function userLogoutReducer(state = {}, action) {
+  switch (action.type) {
+    case USER_LOGOUT_REQUEST:
+      return { loading: true };
+    case USER_LOGOUT_SUCCESS:
+      return { loading: false, userInfo: action.payload };
+    case USER_LOGOUT_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+}
+
+export { userSigninReducer, userRegisterReducer, userLogoutReducer };

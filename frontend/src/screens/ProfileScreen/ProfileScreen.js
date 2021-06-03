@@ -1,11 +1,18 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../actions/userActions";
 
 import "./index.css";
 
 function ProfileScreen(props) {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+  const dispatch = useDispatch();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(logout());
+  };
 
   return (
     <div className="profile-body">
@@ -18,7 +25,9 @@ function ProfileScreen(props) {
         <h3>Profile Avatar:</h3>
         <input type="file"></input> <button>Submit</button>
       </div>
-      <button className="profile-logout">Logout</button>
+      <button onClick={submitHandler} className="profile-logout">
+        Logout
+      </button>
     </div>
   );
 }

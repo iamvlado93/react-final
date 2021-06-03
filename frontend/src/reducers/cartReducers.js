@@ -1,12 +1,18 @@
 import {
   CART_ADD_ITEM,
   CART_REMOVE_ITEM,
+  CART_SAVE_CREDIT_CARD,
   CART_SAVE_PAYMENT,
   CART_SAVE_SHIPPING,
 } from "../const/cartConst";
 
 function cartReducer(
-  state = { cartItems: [], shipping: {}, payment: {} },
+  state = {
+    cartItems: [],
+    shipping: {},
+    payment: {},
+    creditCard: {},
+  },
   action
 ) {
   switch (action.type) {
@@ -29,6 +35,8 @@ function cartReducer(
       return { ...state, shipping: action.payload };
     case CART_SAVE_PAYMENT:
       return { ...state, payment: action.payload };
+    case CART_SAVE_CREDIT_CARD:
+      return { ...state, creditCard: action.payload };
     default:
       return state;
   }

@@ -1,6 +1,9 @@
 import Axios from "axios";
 import Cookies from "js-cookie";
 import {
+  USER_LOGOUT_FAIL,
+  USER_LOGOUT_REQUEST,
+  USER_LOGOUT_SUCCESS,
   USER_REGISTER_FAIL,
   USER_REGISTER_REQUEST,
   USER_REGISTER_SUCCESS,
@@ -35,4 +38,15 @@ const register = (name, email, password) => async (dispatch) => {
   }
 };
 
-export { signin, register };
+const logout = (name, email) => async (dispatch) => {
+  dispatch({ type: USER_LOGOUT_REQUEST, payload: { name, email } });
+  try {
+    const { data } = await Axios.delete("/api/users/signin", {});
+    dispatch({ type: USER_LOGOUT_SUCCESS, payload: data });
+    Cookies.set("userInfo", JSON.stringify(data));
+  } catch (error) {
+    dispatch({ type: USER_LOGOUT_FAIL, payload: error.message });
+  }
+};
+
+export { signin, register, logout };
