@@ -9,7 +9,7 @@ function ProfileScreen(props) {
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
-  const submitHandler = (e) => {
+  const LogoutButton = (e) => {
     e.preventDefault();
     dispatch(logout());
   };
@@ -25,7 +25,7 @@ function ProfileScreen(props) {
         <h3>Profile Avatar:</h3>
         <input type="file"></input> <button>Submit</button>
       </div>
-      <button onClick={submitHandler} className="profile-logout">
+      <button onClick={LogoutButton} className="profile-logout">
         Logout
       </button>
     </div>
