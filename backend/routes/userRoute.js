@@ -22,6 +22,24 @@ router.post("/signin", async (req, res) => {
   }
 });
 
+router.post("/logout", async (req, res) => {
+  const signinUser = await User.findOne({
+    email: req.body.email,
+    password: req.body.password,
+  });
+  if (signinUser) {
+    res.send({
+      _id: null,
+      name: null,
+      email: null,
+      isAdmin: null,
+      token: null,
+    });
+  } else {
+    res.status(401).send({ msg: "Something went wrong" });
+  }
+});
+
 router.post("/register", async (req, res) => {
   const user = new User({
     name: req.body.name,

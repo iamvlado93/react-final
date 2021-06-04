@@ -12,6 +12,7 @@ function ProfileScreen(props) {
   const LogoutButton = (e) => {
     e.preventDefault();
     dispatch(logout());
+    props.history.push("/");
   };
 
   return (
