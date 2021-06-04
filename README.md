@@ -1,8 +1,7 @@
 Getting Started
 
 1) Clone the repo:
-git clone https://github.com/Sentinelli/json-server.git
-git clone https://github.com/Sentinelli/fooddoza-dev.git
+https://github.com/iamvlado93/react-final.git
 
 
 2) Install dependencies:
