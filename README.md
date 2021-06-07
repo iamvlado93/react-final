@@ -1,7 +1,7 @@
 Getting Started
 
 1) Clone the repo:
-https://github.com/iamvlado93/react-final.git
+https://github.com/iamvlado93/react-shop.git
 
 
 2) Install dependencies:
